@@ -1,0 +1,15 @@
+#admin-table {
+    border: solid 3px;
+    padding: 5px;
+}
+
+#admin-table th {
+    border: solid 3px;
+    padding: 5px;
+}
+
+#admin-table td {
+    border: solid 3px;
+    padding: 2px;
+}
+
