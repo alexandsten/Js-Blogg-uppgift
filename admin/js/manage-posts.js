@@ -16,9 +16,9 @@ window.onload = async function() {
                 <td>${blog.title}</td>
                 <td>${blog.author}</td>
                 <td>${blog.content}</td>
-                <td>
-                    <input type="button" value="uppdatera" id="upp${i}">
-                    <input type="button" value="radera" id="rad${i}">
+                <td data-id="${blog._id}">
+                    <input type="button" value="uppdatera">
+                    <input type="button" value="radera">
                 </td>
                 </tr>
        `
