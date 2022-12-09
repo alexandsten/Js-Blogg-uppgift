@@ -10,6 +10,8 @@
 
     fetchBlog();
 
+    
+
     async function fetchBlog() {
         try {
             const response = await fetch('https://blog-api-assignment.up.railway.app/posts');
@@ -23,10 +25,10 @@
             // body: JSON.stringify(formDataObject) // body data type must match "Content-Type" header
 
             let blogsection = document.createElement('section')
-            blogsection.classList.add('.blogsection')
+            blogsection.classList.add('blogsection')
             blogsection = "";
-            
-            
+
+            // vid tags: .join(', ')
             for (let posts of blog){
                 blogsection += `
                     <h2 id="blog-title">${posts.title}</h2>
@@ -39,14 +41,27 @@
                     </p> 
                     <br>
                     <br>
-                    <br>
-                    <br>
+                    
                 `;
+                 
+                // console.log(posts.content.length)
+
+
+
+                shortenContent(posts.content.length, 100, posts.content)
+                console.log(shortenContent(posts.content.length, 100, posts.content))
             }   
 
+        
+            document.getElementById('blog-post').innerHTML = blogsection;
 
-            const blogContent = document.querySelectorAll('.blog-content')
+
+
+            let blogContent = document.querySelectorAll('.blog-content')
             console.log(blogContent)
+
+            
+            
 
             const readMore = document.querySelectorAll('.read-more')
             console.log(readMore)
@@ -57,16 +72,6 @@
                         console.log("hej")
                     })
                 }
-
-
-
-
-
-            if ( blogContent.length > 100) {
-                shortenContent(blogContent);
-            }
-
-            document.getElementById('blog-post').innerHTML = blogsection;
 
         // const blog = await response.json();
 
@@ -83,11 +88,14 @@
 ///////////// Här slutar fetchBlog //////////////////
 
 
-    function shortenContent(string) {
-        let shortened = string.slice(0, 100);
-        shortened += "...";
-        return shortened;
-    }
+function shortenContent(letters, num, words) {
+    console.log(letters)
+    if (num >= letters){
+        return words;
+    } 
+    return words.slice(0, num) + "...";
+
+}
         
 // }
 
