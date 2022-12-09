@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(61, 185, 144);
+    padding: 60px
+}
+
+header {
+    padding: 20px 60px 20px 60px;
+    height: 30px;
+}
+
+
+header, div {
+    background-color: white;
+    border-radius: 25px;
+}
+
+div {
+    margin-top: 20px;
+    padding: 30px
+}
+
+#admin-link {
+    margin-left: 97%;
+    
+    font-size: larger;
+}
+
+.blogsection {
+    border-bottom: solid 1px black;
+}
