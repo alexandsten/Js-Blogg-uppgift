@@ -27,44 +27,39 @@
             let blogsection = document.createElement('section')
             blogsection.classList.add('blogsection')
             blogsection = "";
+            let num = 100;
 
-            // vid tags: .join(', ')
-            for (let posts of blog){
-                blogsection += `
-                    <h2 id="blog-title">${posts.title}</h2>
-                    <i id="author">${posts.author}</i>
-                    <i id="date">${posts.date}</i>
-                    <p id="tags">Tags: ${posts.tags.join(', ')}</p>
-                    <p class="blog-content"id="content">
-                        ${posts.content}
+            
+                for (let posts of blog){    
+
+                    if (num <= posts.content.length) {
+                        posts.content = posts.content.slice(0, num - 3) + "..."; 
+
+                        posts.content += `
                         <a href="#" class="read-more">read more</a>
-                    </p> 
-                    <br>
-                    <br>
-                    
-                `;
-                 
-                // console.log(posts.content.length)
+                        `
+                    }
 
+                    // vid tags: .join(', ')
+                    blogsection += `
+                        <h2 id="blog-title">${posts.title}</h2>
+                        <i id="author">${posts.author}</i>
+                        <i id="date">${posts.date}</i>
+                        <p id="tags">Tags: ${posts.tags}</p>
+                        <p class="blog-content"id="content">
+                            ${posts.content}
+                        </p> 
+                        <br>
+                        <br>
+                    `;
 
-
-                shortenContent(posts.content.length, 100, posts.content)
-                console.log(shortenContent(posts.content.length, 100, posts.content))
             }   
 
         
             document.getElementById('blog-post').innerHTML = blogsection;
 
 
-
-            let blogContent = document.querySelectorAll('.blog-content')
-            console.log(blogContent)
-
-            
-            
-
             const readMore = document.querySelectorAll('.read-more')
-            console.log(readMore)
 
                 for (let read of readMore) {
                     read.addEventListener('click', function(e){
@@ -73,11 +68,8 @@
                     })
                 }
 
-        // const blog = await response.json();
 
         } 
-        
-        
         
         catch(error){
             console.log(error)
@@ -85,17 +77,6 @@
         
     }    
 
-///////////// Här slutar fetchBlog //////////////////
 
 
-function shortenContent(letters, num, words) {
-    console.log(letters)
-    if (num >= letters){
-        return words;
-    } 
-    return words.slice(0, num) + "...";
-
-}
-        
-// }
 
