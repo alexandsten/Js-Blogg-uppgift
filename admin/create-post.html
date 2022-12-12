@@ -8,6 +8,44 @@
 <body>
     <h1>This page is required for the VG grade</h1>
 
+        <!--
+            Alex
+
+        här ska användaren kunna skapa nytt inlägg
+
+        det som skall matas in är:
+
+        <Input> för titeln
+        <input> för author
+        <textarea> för inlägget
+        <select> för taggar
+
+        Knapp för att skapa inlägget
+
+        En tillbaka-länk för att navigera tillbaka till admin/index.html
+        ○ Om formuläret lyckades skapa ett nytt inlägg, skicka vidare användaren till
+        admin/index.html
+
+
+        
+    -->
+    <input type="text" name="title" id="blog-title">
+
+    <br>
+    <input type="text" name="author" id="blog-author">
+
+    <br>
+    <textarea name="blog" id="blog-textarea" cols="30" rows="10"></textarea>
+
+    <br>
+
+            <select name="tags" id="blog-tags" multiple>
+                <option value="volvo">Volvo</option>
+            </select>
+
+    <br>
+            <input type="submit" value="Update" id="blog-submit">
+
     <script src="js/create-post.js"></script>
 </body>
 </html>
