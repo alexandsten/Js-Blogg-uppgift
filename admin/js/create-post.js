@@ -13,6 +13,8 @@ document.getElementById(`blog-submit`).addEventListener('click',async function(e
     }
     console.log("valen är " + tagArray);
 
+    let date = new Date();
+
     let blogJson = 
     {
         "tags": 
@@ -20,8 +22,8 @@ document.getElementById(`blog-submit`).addEventListener('click',async function(e
         ,
         "title": document.getElementById(`blog-title`).value,
         "content": document.getElementById(`blog-textarea`).value,
-        "author": document.getElementById(`blog-author`).value
-
+        "author": document.getElementById(`blog-author`).value,
+        "date": date
     }
  
      try {
