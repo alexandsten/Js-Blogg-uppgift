@@ -6,7 +6,7 @@ window.onload = async function() {
             method: 'GET'
         })
         let blogs = await response.json();
-       console.log(blogs)
+   
 
        for (let blog of blogs) {
 
@@ -17,12 +17,12 @@ window.onload = async function() {
                 <td>${blog.author}</td>
                 <td>${blog.content}</td>
                 <td data-id="${blog._id}">
-                    <input type="button" value="uppdatera">
-                    <input type="button" value="radera">
+                    <input type="button" value="uppdatera" class="table-button-update">
+                    <input type="button" value="radera" class="table-button-delete">
                 </td>
                 </tr>
        `
-       console.log(blog)
+    
         /*
 
         loop som skapar ny tr med innehpllande td
@@ -33,6 +33,10 @@ window.onload = async function() {
 
 
        document.getElementById(`admin-table`).innerHTML += tableContent
+
+       buttonEvents()
+
+       
 }
 
     } catch(error) {
@@ -40,14 +44,42 @@ window.onload = async function() {
     }
 
 
-
 }
 
 function buttonEvents() {
-    let postSection = document.getElementById(`admin-posts`)
-    let buttonsTd = postSection.getElementsByTagName(`td`)
 
-    for (let td of buttonsTd) {
-        console.log(td)
+    console.log(`hallå eller`)
+
+    let updateBtn = document.getElementsByClassName(`table-button-update`)
+    let deleteBtn = document.getElementsByClassName(`table-button-delete`)
+
+  
+
+    for (let update of updateBtn) {
+
+        console.log(update)
+       
+
+
+
+        /*
+
+        */
+
+       update.addEventListener('click',function(event) {
+            console.log(`trycka på uppdatera`)
+
+            let parentTr = update.parentNode
+
+        
+            let dataId =   parentTr.getAttribute('data-id')
+            
+            window.location.replace(`update-post.html?id=${dataId}`); 
+
+        })
+
+     
+
+        
     }
 }
