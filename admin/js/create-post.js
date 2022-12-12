@@ -5,17 +5,27 @@ document.getElementById(`blog-submit`).addEventListener('click',async function(e
 
     event.preventDefault()
 
-    var blogOptions = document.getElementById("blog-tags");
+    
+    var options = document.getElementById("blog-tags").options;
+    var tagArray = [];
+    for(option of options){
+       if(option.selected) tagArray.push(option.value);
+    }
+    console.log("valen är " + tagArray);
+ 
+    /*
     var text = blogOptions.options[blogOptions.selectedIndex].text;
 
     var values = Array.prototype.slice.call(document.querySelectorAll('#blog-tags selected'),0).map(function(v,i,a) { 
         return v.value; 
     });
 
+    */
+
     let formJson = 
     {
         "tags": [
-            text
+            tagArray
         ],
         "title": document.getElementById(`blog-title`).value,
         "content": document.getElementById(`blog-textarea`).value,
@@ -29,8 +39,7 @@ document.getElementById(`blog-submit`).addEventListener('click',async function(e
      console.log(`inne i knappen`)
      let urlParams = new URLSearchParams(window.location.search)
 
-     let blogId = urlParams.get('id');
-     console.log("hejsan" + blogId)
+
  
      try {
          await fetch('https://blog-api-assignment.up.railway.app/posts/',  {
@@ -44,6 +53,6 @@ document.getElementById(`blog-submit`).addEventListener('click',async function(e
      } catch(error) {
          console.log(error)
      }
-     window.location.replace('index.html');
+    /* window.location.replace('index.html');   */
  })
 }
