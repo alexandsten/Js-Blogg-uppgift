@@ -8,8 +8,29 @@
 <body>
     <a href="index.html">index</a>
     <h1>This page is required for the VG grade</h1>
-
-
+    <form id="blog-post">
+        <p>Title</p>
+        <input type="text" id="title-input">
+        <br>
+        <p>Author</p>
+        <input type="text" id="author-input">
+        <br>
+        <p>Content</p>
+        <textarea name="contents" id="blog-text" cols="30" rows="10"></textarea>
+        <br>
+        <p>Tags</p>
+        <select name="" id="select" multiple>
+            <option class="my-options" value="News">News</option>
+            <option class="my-options" value="Sport">Sports</option>
+            <option class="my-options" value="Weather">Weather</option>
+            <option class="my-options" value="Food">Food</option>
+            <option class="my-options" value="litterature">Litterature</option>
+            <option class="my-options" value="social media">Social media</option>
+        </select>
+        <br>
+        <button id="">Update</button>
+    </form>
+   
 
 
     <script src="js/update-post.js"></script>
