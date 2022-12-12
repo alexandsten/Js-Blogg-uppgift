@@ -1,5 +1,4 @@
 window.onload = async function() {
-    let postSection = document.getElementById(`admin-posts`)
 
     try {
         const response = await fetch('https://blog-api-assignment.up.railway.app/posts/', {
@@ -23,14 +22,6 @@ window.onload = async function() {
                 </tr>
        `
     
-        /*
-
-        loop som skapar ny tr med innehpllande td
-
-        lägg in rätt innehåll
-
-        */
-
 
        document.getElementById(`admin-table`).innerHTML += tableContent
 
@@ -57,15 +48,6 @@ function buttonEvents() {
 
     for (let update of updateBtn) {
 
-        console.log(update)
-       
-
-
-
-        /*
-
-        */
-
        update.addEventListener('click',function(event) {
             console.log(`trycka på uppdatera`)
 
@@ -78,8 +60,23 @@ function buttonEvents() {
 
         })
 
-     
+    }
 
-        
+    for (let deleteb of deleteBtn) {
+        deleteb.addEventListener('click',async function(event) {
+            event.preventDefault()
+            let dtId = deleteb.parentNode.getAttribute('data-id')
+   
+            try {
+                await fetch(`https://blog-api-assignment.up.railway.app/posts/${dtId}` , {
+                method: 'DELETE' 
+                })
+
+
+                this.parentNode.parentNode.remove()
+            } catch (error) {
+                console.log(error)
+            }
+        })
     }
 }

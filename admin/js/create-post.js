@@ -5,45 +5,37 @@ document.getElementById(`blog-submit`).addEventListener('click',async function(e
 
     event.preventDefault()
 
-    var blogOptions = document.getElementById("blog-tags");
-    var text = blogOptions.options[blogOptions.selectedIndex].text;
+    
+    var options = document.getElementById("blog-tags").options;
+    var tagArray = [];
+    for(let option of options){
+       if(option.selected) tagArray.push(option.value);
+    }
+    console.log("valen är " + tagArray);
 
-    var values = Array.prototype.slice.call(document.querySelectorAll('#blog-tags selected'),0).map(function(v,i,a) { 
-        return v.value; 
-    });
-
-    let formJson = 
+    let blogJson = 
     {
-        "tags": [
-            text
-        ],
+        "tags": 
+            tagArray
+        ,
         "title": document.getElementById(`blog-title`).value,
         "content": document.getElementById(`blog-textarea`).value,
         "author": document.getElementById(`blog-author`).value
 
     }
-    
-     
-    console.log(formJson)
-     
-     console.log(`inne i knappen`)
-     let urlParams = new URLSearchParams(window.location.search)
-
-     let blogId = urlParams.get('id');
-     console.log("hejsan" + blogId)
  
      try {
          await fetch('https://blog-api-assignment.up.railway.app/posts/',  {
-             method: 'POST', // *GET, POST, PUT, DELETE, etc.
+             method: 'POST', 
              headers: {
                'Content-Type': 'application/json'
              },
-             body: JSON.stringify(formJson) // body data type must match "Content-Type" header
+             body: JSON.stringify(blogJson) 
          })
        
      } catch(error) {
          console.log(error)
      }
-     window.location.replace('index.html');
+     window.location.replace('index.html');   
  })
 }
