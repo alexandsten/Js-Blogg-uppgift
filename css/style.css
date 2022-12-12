@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(67, 83, 114);
+    padding: 60px
+}
+
+header {
+    padding: 25px 60px 20px 60px;
+    height: 30px;
+    
+}
+
+
+header, div {
+    background-color: white;
+    border-radius: 25px;
+    
+}
+
+div {
+    margin-top: 20px;
+    padding: 30px
+}
+
+#admin-link {
+    margin-left: 97%;
+    color:rgb(67, 83, 114);
+    font-size: larger;
+    text-decoration: none;
+}
+
+#admin-link:hover {
+    color:rgb(135, 164, 222);
+}
+
+.blog-content {
+    padding-bottom: 40px;
+    border-bottom: 3px dotted rgb(135, 164, 222);
+    margin-bottom: 0;;
+}
+
+#blog-title {
+    margin-top: 0;
+}
+
+.read-more {
+    color: rgb(135, 164, 222);
+    font-weight: 900;
+}
+
+.read-more:hover {
+    color: rgb(74, 89, 119);
+}
