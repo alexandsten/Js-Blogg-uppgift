@@ -1,4 +1,5 @@
 #admin-table {
+    margin: 0 auto;
     border-radius:5px;
     color: white;
     border: solid 3px white;
@@ -8,6 +9,7 @@
 
 #admin-table th {
     border: solid 3px rgb(157, 155, 164);
+    background-color: rgb(35, 35, 38);
     padding: 5px;
 }
 
@@ -136,7 +138,7 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 30px;
     margin-left: 45%;
-    color: rgb(117, 117, 120);
+    color: rgb(35, 35, 38);
 }
 
 .createDiv {
@@ -196,24 +198,27 @@
     margin: 0px 15px 15px 80%;
     text-decoration: none;
     border-radius: 15px;
-    background-color: rgb(148, 161, 170);
+    background-color: rgb(59, 66, 72);
     padding: 5px 45px;
 }
 
 .ad-create-link:hover {
-    background-color: rgb(77, 81, 83);
+    color: rgb(35, 35, 38);
+    background-color: rgb(177, 185, 190);
 }
 
 .table-button-update,.table-button-delete {
+    background-color: rgb(68, 70, 72);
+    color: white;
     border-radius: 5px;
-    background-color: rgb(210, 220, 227);
+    
     padding: 2px 25px;
-    margin: 15px 4px 4px 30%;
+    margin: 0 auto;
 }
 
 .table-button-update:hover,.table-button-delete:hover {
-    background-color: rgb(68, 70, 72);
-    color: white;
+    background-color: rgb(210, 220, 227);
+    color: rgb(65, 64, 91);
 }
 
 
