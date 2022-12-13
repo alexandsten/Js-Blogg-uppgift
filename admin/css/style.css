@@ -1,15 +1,18 @@
 #admin-table {
-    border: solid 3px;
+    border-radius:5px;
+    color: white;
+    border: solid 3px white;
     padding: 5px;
+    background-color: rgb(94, 94, 96);
 }
 
 #admin-table th {
-    border: solid 3px;
+    border: solid 3px rgb(157, 155, 164);
     padding: 5px;
 }
 
 #admin-table td {
-    border: solid 3px;
+    border: solid 3px rgb(157, 155, 164);
     padding: 2px;
 }
 
@@ -29,54 +32,6 @@
     color:white;
     box-shadow: 1px 1px 1px 1px gray;
     background-color:rgb(67, 83, 114);
-}
-
-.createDiv {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(76, 77, 79);
-    padding: 15px 0px 10px 0px;
-}
-
-.createDiv label {
-    color: white;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0px 12px 12px 0px;
-}
-
-
-.createDiv textarea, .createDiv input {
-    margin: 15px 0px;
-}
-
-#blog-title{
-    margin-left: 15px;
-}
-
-#blog-title, #blog-author, #blog-tags {
-    width: 220px;
-    border-radius: 5px;
-}
-
-#blog-textarea {
-    width: 520px;
-    border-radius: 15px;
-}
-
-#blog-tags option:hover {
-    background-color: rgb(184, 228, 229);
-}
-
-#blog-submit {
-    border-radius: 15px;
-    background-color: rgb(210, 220, 227);
-    margin-left: 50px;
-    padding: 5px 45px;
-}
-
-#blog-submit:hover {
-    background-color: rgb(142, 146, 149);
 }
 
 #update-header {
@@ -173,12 +128,21 @@
     box-shadow: 1px 1px 1px 1px gray;
     background-color:rgb(67, 83, 114);
 }
-/*---------^^CSS för innehållet på update-post.html^^--------------*/
+/*---------^^CSS för innehållet på create-post.html^^--------------*/
+
+
+.ad-create-h1 {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+    margin-left: 45%;
+    color: rgb(117, 117, 120);
+}
 
 .createDiv {
     display: flex;
     justify-content: center;
-    background-color: rgb(76, 77, 79);
+    background-color: rgb(182, 182, 184);
     padding: 15px 0px 10px 0px;
 }
 
@@ -209,7 +173,7 @@
 }
 
 #blog-tags option:hover {
-    background-color: rgb(184, 228, 229);
+    background-color: rgb(206, 202, 199);
 }
 
 #blog-submit {
@@ -221,5 +185,36 @@
 
 #blog-submit:hover {
     background-color: rgb(142, 146, 149);
+    color: white;
 }
+
+.ad-create-link {
+    color: white;
+    text-align: center;
+    width: 90px;
+    display: inline-block;
+    margin: 0px 15px 15px 80%;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgb(148, 161, 170);
+    padding: 5px 45px;
+}
+
+.ad-create-link:hover {
+    background-color: rgb(77, 81, 83);
+}
+
+.table-button-update,.table-button-delete {
+    border-radius: 5px;
+    background-color: rgb(210, 220, 227);
+    padding: 2px 25px;
+    margin: 15px 4px 4px 30%;
+}
+
+.table-button-update:hover,.table-button-delete:hover {
+    background-color: rgb(68, 70, 72);
+    color: white;
+}
+
+
 
