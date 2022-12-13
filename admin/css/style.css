@@ -23,3 +23,12 @@
 #update-post {          /*Div för innehållet på update-post.html*/
     margin-left: 40px;
 }
+
+.createDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.createDiv label {
+    margin: 0px 12px 12px 0px;
+}
