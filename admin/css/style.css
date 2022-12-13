@@ -19,9 +19,105 @@
     margin-bottom: 10px;
     
 }
+/*-----------CSS för innehållet på update-post.html--------------*/
+#update-body {
+    background-color: rgb(67, 83, 114);
+    padding: 40px 30%;
+}
 
-#update-post {          /*Div för innehållet på update-post.html*/
-    margin-left: 40px;
+#update-header {
+    display: flex;
+}
+
+#update-title {
+    color: white;
+}
+
+#to-admin {
+    background-color: white;
+    color: rgb(67, 83, 114);
+    margin-left: auto;
+    border-radius: 25px;
+    padding: 15px;
+    height: 100%;
+    margin-top: 10px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#to-admin:hover {
+    color:white;
+    border: 0.5px solid white;
+    background-color:rgb(67, 83, 114);
+}
+
+#update-post {
+    border-radius: 25px;
+    background-color: white;
+    padding: 30px;
+}
+
+.the-update-content {
+    width: 100%
+}
+
+#title-update,
+#update-author,
+#update-content-header,
+#update-tags {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 9px;
+}
+
+#update-post> textarea {
+    resize: none;
+}
+
+#update-post>input, textarea {
+    border-radius: 5px;
+    padding: 10px
+}
+
+#update-post>select {
+    border-radius:  8px ;
+    padding: 0 10px 0 10px;
+    width: 100%
+}
+
+.scrollers::-webkit-scrollbar {
+    width: 12px;
+}
+
+.scrollers::-webkit-scrollbar-track {
+    background: lightgrey;
+    border: 0.5px black solid;
+    border-radius: 5px;
+}
+
+.scrollers::-webkit-scrollbar-thumb {
+    background-color: rgb(67, 83, 114);
+    border-radius: 25px;
+}
+
+#update-btn {
+    background-color: white;
+    border-radius: 25px;
+    border: none;
+    padding: 15px;
+    color:rgb(67, 83, 114);
+    border: 1px solid rgb(67, 83, 114);
+    font-weight: 600;
+    font-size: medium;
+
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+#update-btn:hover {
+    color:white;
+    box-shadow: 1px 1px 1px 1px gray;
+    background-color:rgb(67, 83, 114);
 }
 
 .createDiv {

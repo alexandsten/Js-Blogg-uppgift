@@ -2,24 +2,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Update post</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <a href="index.html">Back to admin</a>
-    <h1>Update post</h1>
+<body id="update-body">
+    <header id="update-header">
+        <h1 id="update-title">Update post</h1>
+        <a href="index.html" id="to-admin">Back to admin</a>
+    </header>
     <form id="update-post">
-        <p>Title:</p>
-        <input name="title" type="text" id="title-input">
+        <p id="title-update" class="the-update-content">Title:</p>
+        <input name="title" type="text" id="title-input" class="the-update-content">
         <br>
-        <p>Author:</p>
-        <input name="author" type="text" id="author-input">
+        <p id="update-author" class="the-update-content">Author:</p>
+        <input name="author" type="text" id="author-input" class="the-update-content">
         <br>
-        <p>Content:</p>
-        <textarea name="content" id="blog-text" cols="30" rows="10"></textarea>
+        <p id="update-content-header" class="the-update-content">Content:</p>
+        <textarea name="content" id="blog-text" cols="30" rows="10" class="the-update-content scrollers"></textarea>
         <br>
-        <p>Tags:</p>
-        <select name="tags" id="select" multiple>
+        <p id="update-tags" class="the-update-content ">Tags:</p>
+        <select name="tags" id="select" class="the-update-content scrollers" multiple>
             <option class="my-options" value="News">News</option>
             <option class="my-options" value="Sport">Sports</option>
             <option class="my-options" value="Weather">Weather</option>
@@ -28,7 +30,7 @@
             <option class="my-options" value="social media">Social media</option>
         </select>
         <br>
-        <button>Update</button>
+        <button id="update-btn" class="the-update-content">Update</button>
     </form>
    
 

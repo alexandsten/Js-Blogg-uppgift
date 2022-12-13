@@ -1,5 +1,4 @@
 
-// console.log(location.search)
 let urlParams = new URLSearchParams(window.location.search)
 console.log(urlParams.get('id'))
 
@@ -11,12 +10,7 @@ async function readMore() {
          let post = await response.json();
          console.log(post)
 
-        // method: 'GET', // *GET, POST, PUT, DELETE, etc.
-        // headers: {
-        //   'Content-Type': 'application/json'
-        // },
-        // body: JSON.stringify(formDataObject) // body data type must match "Content-Type" header
-
+       
         let blogsection = document.createElement('section')
         blogsection.classList.add('blogsection')
         blogsection = "";
@@ -43,5 +37,3 @@ async function readMore() {
     }
 }
 
-
-// Se lösningsförlag del 2 från 07:30 ca
