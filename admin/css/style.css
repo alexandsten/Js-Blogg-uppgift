@@ -27,8 +27,48 @@
 .createDiv {
     display: flex;
     justify-content: center;
+    background-color: rgb(76, 77, 79);
+    padding: 15px 0px 10px 0px;
 }
 
 .createDiv label {
+    color: white;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0px 12px 12px 0px;
 }
+
+
+.createDiv textarea, .createDiv input {
+    margin: 15px 0px;
+}
+
+#blog-title{
+    margin-left: 15px;
+}
+
+#blog-title, #blog-author, #blog-tags {
+    width: 220px;
+    border-radius: 5px;
+}
+
+#blog-textarea {
+    width: 520px;
+    border-radius: 15px;
+}
+
+#blog-tags option:hover {
+    background-color: rgb(184, 228, 229);
+}
+
+#blog-submit {
+    border-radius: 15px;
+    background-color: rgb(210, 220, 227);
+    margin-left: 50px;
+    padding: 5px 45px;
+}
+
+#blog-submit:hover {
+    background-color: rgb(142, 146, 149);
+}
+
